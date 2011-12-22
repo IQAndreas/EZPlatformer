@@ -10,7 +10,7 @@ ezplatformer.menus{
 		{
 			this.score = score;
 			this.wonGame = wonGame;
-			super(true, 0x88000000);
+			super(true, 0x88000000, false);
 		}
 		
 		public static const RESTART:String = "GameOverMenu::restart";

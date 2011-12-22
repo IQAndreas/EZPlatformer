@@ -16,13 +16,11 @@ package ezplatformer.menus
 		
 		public function PauseMenu()
 		{
-			super(true, 0x88000000);
+			super(true, 0x88000000, true);
 		}
 		
 		public override function create():void
 		{
-			FlxG.mouse.show();
-			
 			//Sorry about all the hardcoded position values. :(
 			var currentY:Number = 50;
 			
@@ -66,12 +64,6 @@ package ezplatformer.menus
 				this.close(QUIT_GAME);
 			}
 		}*/
-
-		override public function close(reason:String) : void
-		{
-			FlxG.mouse.hide();
-			super.close(reason);
-		}
 
 	}
 }

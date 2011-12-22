@@ -19,10 +19,16 @@ ezplatformer{
 		public var coins:FlxGroup;
 		public var player:FlxSprite;
 		
-		override public function create():void
+		public function PlayState()
 		{
 			//Set the background color to light gray (0xAARRGGBB)
-			FlxG.bgColor = 0xffaaaaaa;
+			//Do not use the mouse for anything
+			super(0xffaaaaaa, false);
+		}
+		
+		override public function create():void
+		{
+			super.create();
 			
 			//Just to simplify and avoid too much code in here!
 			generateLevel1(this);

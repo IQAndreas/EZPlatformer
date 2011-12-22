@@ -12,13 +12,12 @@ ezplatformer.menus{
 	public class MainMenu extends FlxState
 	{
 		public function MainMenu()
-		{ }
+		{
+			super(0xff000000, false); 
+		}
 		
 		public override function create():void
 		{
-			FlxG.keys.reset();
-			FlxG.bgColor = 0xff000000;
-			
 			var gameText:FlxText = new FlxText(0,(FlxG.height/2) - 80, FlxG.width, "EZPlatformer");
 			//gameText = new FlxText(0,0, FlxG.width, "EZPlatformer!");
 			gameText.setFormat( null, 32, 0xffCC0000, "center", 0xFF333333);
